@@ -7,9 +7,9 @@ Sample of Polygon:
 )
 
 ## Type of Polygon:
-1. Triangle
+1. Square
 2. Rectangle
-3. Square
+3. Triangle
 4. Circle
 
 ## Notation of triangle
