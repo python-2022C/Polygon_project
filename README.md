@@ -19,92 +19,93 @@ Sample of Polygon:
 
 ## Properties of Square
 
-1. Distance
-2. Side
-3. Perimeter
-4. Area
+1. Is valid
+2. Perimeter
+3. Area
 
 ## Properties of Rectangle
 
-1. Distance
-2. Side
-3. Perimeter
-4. Area
+1. Is valid
+2. Perimeter
+3. Area
 
 ## Properties of Triangle
 
-1. Distance
-2. Side
+1. Is valid
 3. Perimeter
 4. Area
 
 ## Properties of Circle
-
-1. Diameter
-2. circumference
-3. Area
+1. Is valid
+2. Diameter
+3. circumference
+4. Area
 
 # Usage examples
 
 ## Example of Square
 
 ```python
-square_points = [(0,0), (0,4), (4,4), (4,0)]
-square = Square(square_points)
-square_sides = square.sides()
+square = Square(5)
+is_valid_square = square.is_valid()
 square_perimeter = square.perimeter()
 square_area = square.area()
 
-print("The sides of the square are:", square_sides)
-# The sides of the square are: [4.0, 4.0, 4.0, 4.0]
+print("Can it be a square?", is_valid_square)
+# Can it be a square? True
 print("The perimeter of the square is:", square_perimeter)
-# The perimeter of the square is: 16.0
+# The perimeter of the square is: 20
 print("The area of the square is:", square_area)
-# The area of the square is: 16.0
+# The area of the square is: 25
 ```
 
 ## Example of Rectangle
 
 ```python
-rectangle = Rectangle([(0,0), (3,0), (3,4), (0,4)])
-rectangle_sides = rectangle.sides()
+rectangle = Rectangle(4, 7)
+is_valid_rectangle = rectangle.is_valid()
 rectangle_perimeter = rectangle.perimeter()
 rectangle_area = rectangle.area()
 
-print("The sides of the rectangle are:", rectangle_sides)
-# The sides of the rectangle are: [4.0, 3.0, 4.0, 3.0]
+print("Can it be a square?", is_valid_rectangle)
+# Can it be a square? True
 print("The perimeter of the rectangle is:", rectangle_perimeter)
-# The perimeter of the rectangle is: 14.0
+# The perimeter of the rectangle is: 22
 print("The area of the rectangle is:", rectangle_area)
-# The area of the rectangle is: 12.0
+# The area of the rectangle is: 28
 ```
 
 ## Example of Triangle
 
 ```python
-triangle = Triangle([(1,1), (4,3), (6,1)])
-triangle_sides = triangle.sides()
+triangle = Triangle(4, 7, 5)
+is_valid_triangle = triangle.is_valid()
 triangle_perimeter = triangle.perimeter()
 triangle_area = triangle.area()
-print("The sides of the triangle are:", triangle_sides)
-# The sides of the triangle are: [5.0, 3.605551275463989, 2.8284271247461903]
+
+print("Can it be a triangle?", is_valid_triangle)
+# Can it be a triangle? True
 print("The perimeter of the triangle is:", triangle_perimeter)
-# The perimeter of the triangle is: 11.43397840021018
+# The perimeter of the triangle is: 16
 print("The area of the triangle is:", triangle_area)
-# The area of the triangle is: 5.0
+# The area of the triangle is: 9.797958971132712
 ```
 
 ## Example of Circle
 
 ```python
-circle = Circle(5)
+circle = Circle(4)
+is_valid_circle = circle.is_valid()
 circle_diameter = circle.diameter()
 circle_circumference = circle.circumference()
 circle_area = circle.area()
+
+print("Can it be a circle?", is_valid_circle)
+# Can it be a circle? True
 print("The diameter of the circle is:", circle_diameter)
-# The diameter of the circle is: 10
+# The diameter of the circle is: 8
 print("The circumference of the circle is:", circle_circumference)
-# The circumference of the circle is: 31.41592653589793
+# The circumference of the circle is: 25.132741228718345
 print("The area of the circle is:", circle_area)
-# The area of the circle is: 78.53981633974483
+# The area of the circle is: 50.26548245743669
 ```
