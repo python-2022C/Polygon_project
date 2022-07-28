@@ -12,15 +12,18 @@ class Square:
     def is_valid(self):
         """
         returns area of square -> (bool)
-        """        
-        return self.square_side > 0
+        """
+        a = self.square_side 
+        return a > 0
 
     def area(self)-> bool:
         """
         returns area of square -> (float)
         """
         if self.square_side > 0:
-            return float(self.square_side * self.square_side)
+            a = self.square_side
+            s = a*a
+            return float(s)
         else:
             return 0
     
@@ -30,7 +33,9 @@ class Square:
         """
 
         if self.square_side > 0:
-            return float(self.square_side * 4)
+            a = self.square_side
+            p = a * 4
+            return float(p)
 
         else:
             return 0
