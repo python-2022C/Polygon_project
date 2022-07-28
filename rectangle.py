@@ -22,7 +22,7 @@ class Rectangle:
         else:
             False
     def perimeter(self):
-        if self.a > 0 and self.b > 0:
+        if self.is_valid():
             return (self.a + self.b)*2
         else:
             return 0
