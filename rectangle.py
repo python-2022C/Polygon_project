@@ -12,7 +12,9 @@ class Rectangle:
         """
         returns area of rectangle -> (bool)
         """ 
-        return self.a > 0 and self.b > 0
+        a = self.a
+        b = self.b
+        return a > 0 and b > 0
 
     # Create method "perimeter" in the Rectangle class
     # This method finds the perimeter of the rectangle
@@ -21,7 +23,12 @@ class Rectangle:
         """
         returns area of rectangle -> (float)
         """
-        return float((self.a*2) + (self.b*2)) if self.is_valid() else 0
+        a = self.a
+        b = self.b
+        if self.is_valid():
+            return float(a*2 + b*2)
+        else:
+            return 0
 
     # Create method "area" in the Rectangle class
     # This method finds the area of the rectangle
@@ -30,4 +37,9 @@ class Rectangle:
         """
         returns peremets of rectangle -> (float)
         """
-        return float(self.a * self.b) if self.is_valid() else 0
+        a = self.a
+        b = self.b
+        if self.is_valid():
+            return float(a * b)
+        else:
+            return 0
