@@ -1,53 +1,63 @@
 import math
 class Triangle:
     def __init__(self, a:float, b:float, c:float):
-
         self.a = a
         self.b = b
         self.c = c
-    def is_valid(self):
-        if self.a + self.b > self.c and self.c + self.b > self.a and self.c + self.a > self.b and self.a>0 and self.b>0 and self.c>0 :
-            return True
-        return False
-    def get_type(self):
-        s = ''
-        if self.a ** 2 + self.b ** 2 == self.c ** 2 :
-            s += 'based on angles -> right, ' # one angle is 90
-        if self.a ** 2 + self.b ** 2 > self.c **2 :
-            s += 'based on angles -> acute, ' # each angle is < 90
-        if self.a ** 2 + self.b ** 2 < self.c **2 :
-            s += 'based on angles -> obtuse, ' # one angle is > 90
-        if self.a == self.b or self.a == self.c or self.c == self.b :
-            s += 'based on sides -> Isoscelec, '  # Length of two sides are equal
-        if self.a == self.b and self.a == self.c and self.c == self.b :
-            s += 'based on sides -> Equilateral, ' # Length of all sides are equal
-        if self.a != self.b and self.a != self.c and self.c != self.b :
-            s += 'based on sides -> Scalene, ' # Length of all sides are different
-        return s
-    def perimeter(self):
+
+    def is_valid(self) -> bool:
+        '''
+        This method checks if the triangle is valid.
+        
+        Args: 
+            No
+        Returns:
+            bool: True if the triangle is valid, False otherwise
+        '''
+        min_side = min(self.a, self.b, self.c)
+        max_side = max(self.a, self.b, self.c)
+        middle_side = self.a, self.b, self.c - max_side - min_side
+        return middle_side < min_side + max_side
+    
+    def get_type(self) -> str:
+        '''
+        This method finds the type of the triangle.
+        '''
         if self.is_valid():
-            return self.a+self.b+self.c
+            if self.a == self.b and self.b == self.c: 
+                return "By Side: Equilateral Triangle"
+            elif self.a == self.b or self.a == self.c or self.b == self.c: 
+                return "By Side: Isoceles Triangle"
+            else:
+                return "By Side: Scalene Triangle"
+        else:
+            return "this triangle is not valid"
+        
+    def perimeter(self):
+        '''
+        This method finds the perimeter of the triangle.
+
+        Args:
+            No
+        Returns:
+            int or float: return perimeter of the triangle if the triangle is valid, 0 otherwise
+        '''
+        if self.is_valid():
+            return self.a + self.b + self.c
         return 0
+
     def area(self):
+        '''
+        This method finds the area of the triangle.
+
+        Args:
+            NO
+        Returns:
+            int or float: return area of the triangle if the triangle is valid, 0 otherwise
+        '''
         if self.is_valid():
-            p = (self.a + self.b + self.c)/2
-            return math.sqrt(p*(p-self.a)*(p-self.b)*(p-self.c))
-
-# Create method "is_valid" in the Triangle class
-# This method checks if the triangle is valid
-# True if the triangle is valid, False otherwise
-
-# Create method "get_type" in the Triangle class
-# This method finds the type of the triangle
-    def get_type(self):
-
-
-# Create method "perimeter" in the Triangle class
-# This method finds the perimeter of the triangle
-# return perimeter of the triangle if the triangle is valid, 0 otherwise
-    def perimeter(self):
-        return self.a+self.b+self.c
-# Create method "area" in the Triangle class
-# This method finds the area of the triangle
-# return area of the triangle if the triangle is valid, 0 otherwise
-
+            semi_petemeter = self.perimeter() / 2
+            s = math.sqrt(semi_petemeter * (semi_petemeter - self.a) * (semi_petemeter - self.b) * (semi_petemeter - self.c))
+            return s
+        else:
+            return 0
