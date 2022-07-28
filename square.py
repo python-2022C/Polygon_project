@@ -3,7 +3,12 @@ import math
 class Square:
     def __init__(self, square_side:float):
         pass
-    
+    def is_valid():
+        return ""
+    def area(self):
+        return 0
+    def perimeter(self):
+        return 0
 # Create method "is_valid" in the Square class
 # This method checks if the square is valid
 # True if the square is valid, False otherwise
