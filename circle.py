@@ -1,25 +1,58 @@
 import math
-
 class Circle:
     def __init__(self, radius:float):
-        self.r = radius
-    # Create method "is_valid" in the Circle class
-    # This method checks if the circle is valid
-    # True if the circle is valid, False otherwise
+        self.radius = radius
+        
+    def is_valid(self) -> bool:
+        """
+        This method checks if the circle is valid.
+        
+        Args:
+            No
+        Returns:
+            bool: True if the circle is valid, False otherwise
+        """
+        return self.radius > 0
+    
+    def diameter(self):
+        '''
+        This method finds the diameter of the circle.
 
-    # Create method "diameter" in the Circle class
-    # This method finds the diameter of the circle
-    # return diameter of the circle if the circle is valid, 0 otherwise
+        Args:
+            no
+        Returns:
+            float: return diameter of the circle if the circle is valid, 0 otherwise
+        '''
+        if self.is_valid():
+            return 2 * self.radius
+        return 0
+    
+    def circumference(self) -> float:
+        '''
+        This method finds the circumference of the circle.
 
-    # Create method "circumference" in the Circle class
-    # This method finds the circumference of the circle
-    # return circumference of the circle if the circle is valid, 0 otherwise
+        Args:
+            no
+        Returns:
+            float: return circumference of the circle if the circle is valid, 0 otherwise
+        '''
+        if self.is_valid():
+            return 2 * math.pi * self.radius
+        return 0
+    
+    def area(self) -> float:
+        '''
+        This method finds the area of the circle.
 
-    # Create method "area" in the Circle class
-    # This method finds the area of the circle
-    # return area of the circle if the circle is valid, 0 otherwise
-    def is_valid(self):
-        return self.r > 0
+        Args:
+            no
+        Returns:
+            float: return area of the circle if the circle is valid, 0 otherwise
+        '''
+        if self.is_valid():
+            return math.pi * self.radius**2
+        return 0
+
 
     def diameter(self):
         if self.r > 0:
