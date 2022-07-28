@@ -2,7 +2,14 @@ import math
 
 class Triangle:
     def __init__(self, a:float, b:float, c:float):
-        pass
+        self.a=a 
+        self.b=b
+        self.c=c
+def is_valid(a,b,c):
+    l=a+b+c-max(a,b,c)-min(a,b,c)
+    if max(a,b,c)+min(a,b,c)>l :
+        return True
+    return False
 
 # Create method "is_valid" in the Triangle class
 # This method checks if the triangle is valid
