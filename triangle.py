@@ -8,6 +8,9 @@ class Triangle:
 # This method checks if the triangle is valid
 # True if the triangle is valid, False otherwise
 
+# Create method "get_type" in the Triangle class
+# This method finds the type of the triangle
+
 # Create method "perimeter" in the Triangle class
 # This method finds the perimeter of the triangle
 # return perimeter of the triangle if the triangle is valid, 0 otherwise
