@@ -2,8 +2,13 @@ import math
 
 class Triangle:
     def __init__(self, a:float, b:float, c:float):
-        pass
-
+        self.a = a
+        self.b = b
+        self.c = c
+    def is_valid(s,a,b,c):
+        if s.a + s.b > s.c and s.a + s.c > s.b and s.b + s.c > s.a:
+            return True
+        return False
 # Create method "is_valid" in the Triangle class
 # This method checks if the triangle is valid
 # True if the triangle is valid, False otherwise
