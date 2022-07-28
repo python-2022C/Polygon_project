@@ -17,25 +17,25 @@ Sample of Polygon:
 ![triangle](https://i.stack.imgur.com/1GkR3.png
 )
 
-## Properties of Square
+## Methods of Square
 
 1. Is valid
 2. Perimeter
 3. Area
 
-## Properties of Rectangle
+## Methods of Rectangle
 
 1. Is valid
 2. Perimeter
 3. Area
 
-## Properties of Triangle
+## Methods of Triangle
 
 1. Is valid
 3. Perimeter
 4. Area
 
-## Properties of Circle
+## Methods of Circle
 1. Is valid
 2. Diameter
 3. circumference
