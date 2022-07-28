@@ -20,5 +20,6 @@ class Circle:
     # return area of the circle if the circle is valid, 0 otherwise
     def is_valid(self):
         return self.r > 0
+    def diameter(self):
 
 
