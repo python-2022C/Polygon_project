@@ -28,7 +28,9 @@ class Square:
         """
         returns peremets of square -> (float)
         """
+
         if self.square_side > 0:
             return float(self.square_side * 4)
+
         else:
             return 0
