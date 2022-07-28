@@ -2,6 +2,15 @@ import math
 
 class Rectangle:
     def __init__(self, a:float, b:float):
+        self.a
+        self.b
+        def is_valied(a,b):
+            if a==b or a==0 or b==0:
+                return 0
+        def perimetr(a,b):
+            return 2*(a+b)
+        def area(a,b):
+            return a*b
         pass
 
     # Create method "is_valid" in the Rectangle class
