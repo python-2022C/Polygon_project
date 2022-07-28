@@ -32,6 +32,7 @@ Sample of Polygon:
 ## Methods of Triangle
 
 1. Is valid
+2. Get Type
 3. Perimeter
 4. Area
 
