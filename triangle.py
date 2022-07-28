@@ -1,15 +1,14 @@
 import math
-
 class Triangle:
     def __init__(self, a:float, b:float, c:float):
-        self.a=a 
-        self.b=b
-        self.c=c
+        self.a = a
+        self.b = b
+        self.c = c
 
     def is_valid(self) -> bool:
         '''
         This method checks if the triangle is valid.
-
+        
         Args: 
             No
         Returns:
