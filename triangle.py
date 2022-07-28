@@ -14,24 +14,20 @@ class Triangle:
         Returns:
             bool: True if the triangle is valid, False otherwise
         '''
-        min_side = min(self.a, self.b, self.c)
-        max_side = max(self.a, self.b, self.c)
-        middle_side = self.a, self.b, self.c - max_side - min_side
-        return middle_side < min_side + max_side
-    
+        if self.a+self.b>self.c and self.a+self.c>self.b and  self.b+self.c>self.a :
+            return True
+        return False
     def get_type(self) -> str:
         '''
         This method finds the type of the triangle.
         '''
-        if self.is_valid():
-            if self.a == self.b and self.b == self.c: 
-                return "By Side: Equilateral Triangle"
-            elif self.a == self.b or self.a == self.c or self.b == self.c: 
-                return "By Side: Isoceles Triangle"
-            else:
-                return "By Side: Scalene Triangle"
-        else:
-            return "this triangle is not valid"
+        if self.a==self.b==self.c :
+            return "Teng tomonli"
+        elif self.a==self.b or self.b==self.c or self.a==self.c :
+            return "Teng yonli"
+        elif self.a!=self.b and self.b!=self.c and self.a!=self.c:
+            return "Turlli tomonli"
+        return "TUg'ri burchakli"
         
     def perimeter(self):
         '''
@@ -42,22 +38,19 @@ class Triangle:
         Returns:
             int or float: return perimeter of the triangle if the triangle is valid, 0 otherwise
         '''
-        if self.is_valid():
             return self.a + self.b + self.c
-        return 0
-
     def area(self):
         '''
         This method finds the area of the triangle.
-
+        
         Args:
             NO
         Returns:
             int or float: return area of the triangle if the triangle is valid, 0 otherwise
         '''
-        if self.is_valid():
-            semi_petemeter = self.perimeter() / 2
-            s = math.sqrt(semi_petemeter * (semi_petemeter - self.a) * (semi_petemeter - self.b) * (semi_petemeter - self.c))
-            return s
-        else:
-            return 0
+        x=max(self.a,self.b,self.c)
+        y=min(self.a,self.b,self.c)
+        z=self.a+self.b+self.c-x-y
+        if pow(z,2)+pow(y,2)==pow(x,2):
+            return (z*y)/2
+        return 0
