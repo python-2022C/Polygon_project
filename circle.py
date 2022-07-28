@@ -17,6 +17,9 @@ class Circle:
 
     # Create method "area" in the Circle class
     # This method finds the area of the circle
+    def area(self,radius):
+    self.radius = radius
+    return self.radius**2*math.pi
     # return area of the circle if the circle is valid, 0 otherwise
     def is_valid(self):
         return self.r > 0
