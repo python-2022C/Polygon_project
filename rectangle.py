@@ -21,3 +21,9 @@ class Rectangle:
             return True
         else:
             False
+    def perimeter(self):
+        if self.a > 0 and self.b > 0:
+            return (self.a + self.b)*2
+        else:
+            return 0
+
