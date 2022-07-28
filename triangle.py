@@ -23,8 +23,8 @@ class Triangle:
 # Create method "perimeter" in the Triangle class
 # This method finds the perimeter of the triangle
 # return perimeter of the triangle if the triangle is valid, 0 otherwise
-    def perimeter(a,b,c) :
-        return a+b+c
+    def perimeter(self) :
+        return self.a+self.b+self.c
 
 
 # Create method "area" in the Triangle class
