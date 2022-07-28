@@ -5,11 +5,13 @@ class Triangle:
         self.a=a 
         self.b=b
         self.c=c
-def is_valid(a,b,c):
-    l=a+b+c-max(a,b,c)-min(a,b,c)
-    if max(a,b,c)+min(a,b,c)>l :
-        return True
-    return False
+    def is_valid(a,b,c):
+        l=a+b+c-max(a,b,c)-min(a,b,c)
+        if max(a,b,c)+min(a,b,c)>l :
+            return True
+        return False
+    
+
 
 # Create method "is_valid" in the Triangle class
 # This method checks if the triangle is valid
@@ -21,6 +23,9 @@ def is_valid(a,b,c):
 # Create method "perimeter" in the Triangle class
 # This method finds the perimeter of the triangle
 # return perimeter of the triangle if the triangle is valid, 0 otherwise
+    def perimeter(self) :
+        return self.a+self.b+self.c
+
 
 # Create method "area" in the Triangle class
 # This method finds the area of the triangle
