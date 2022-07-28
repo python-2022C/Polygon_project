@@ -5,10 +5,12 @@ class Triangle:
         self.a = a
         self.b = b
         self.c = c
-    def is_valid(s,a,b,c):
-        if s.a + s.b > s.c and s.a + s.c > s.b and s.b + s.c > s.a:
-            return True
-        return False
+    def perimeter(k,a,b,c):
+        if k.a + k.b > k.c and k.c + k.b > k.a and k.c + k.a > k.b and k.a>0 and k.b>0 and k.c>0 :
+            return k.a +k.b +k.c
+        return 0
+
+    
 # Create method "is_valid" in the Triangle class
 # This method checks if the triangle is valid
 # True if the triangle is valid, False otherwise
