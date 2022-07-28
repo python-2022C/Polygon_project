@@ -5,20 +5,18 @@ class Triangle:
         self.a=a 
         self.b=b
         self.c=c
-    def is_valid(a,b,c):
-        l=a+b+c-max(a,b,c)-min(a,b,c)
-        if max(a,b,c)+min(a,b,c)>l :
+    def is_valid(self):
+        if self.a+self.b>self.c and self.a+self.c>self.b and  self.b+self.c>self.a
             return True
         return False
-    
-
-
 # Create method "is_valid" in the Triangle class
 # This method checks if the triangle is valid
 # True if the triangle is valid, False otherwise
 
 # Create method "get_type" in the Triangle class
 # This method finds the type of the triangle
+    def get_type(self):
+
 
 # Create method "perimeter" in the Triangle class
 # This method finds the perimeter of the triangle
