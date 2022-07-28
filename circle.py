@@ -1,4 +1,5 @@
 import math
+from tkinter import S
 class Circle:
     def __init__(self, radius:float):
         self.radius = radius
@@ -12,8 +13,10 @@ class Circle:
         Returns:
             bool: True if the circle is valid, False otherwise
         """
-        return self.radius > 0
-    
+        r = self.radius
+        return r > 0
+
+
     def diameter(self):
         '''
         This method finds the diameter of the circle.
@@ -24,9 +27,13 @@ class Circle:
             float: return diameter of the circle if the circle is valid, 0 otherwise
         '''
         if self.is_valid():
-            return 2 * self.radius
+            r = self.radius
+            d = 2 * r
+            return d
+
         return 0
-    
+
+
     def circumference(self) -> float:
         '''
         This method finds the circumference of the circle.
@@ -37,9 +44,14 @@ class Circle:
             float: return circumference of the circle if the circle is valid, 0 otherwise
         '''
         if self.is_valid():
-            return 2 * math.pi * self.radius
+            r = self.radius
+            d = 2 * r
+            pi =  math.pi
+            return d * pi
+
         return 0
-    
+
+
     def area(self) -> float:
         '''
         This method finds the area of the circle.
@@ -50,26 +62,11 @@ class Circle:
             float: return area of the circle if the circle is valid, 0 otherwise
         '''
         if self.is_valid():
-            return math.pi * self.radius**2
+            pi = math.pi
+            r = self.radius
+            s = r**2*pi
+            return s
+
         return 0
-
-
-    def diameter(self):
-        if self.r > 0:
-            return self.r*2
-        else:
-            return 0
-
-    def circumference(self):
-        if self.is_valid():
-            return 2*math.pi*self.r
-        else:
-            return 0
-
-    def area(self):
-        if self.is_valid():
-            return 2*math.pi*self.r**2
-        else:
-            return 0
 
 
