@@ -2,10 +2,14 @@ import math
 
 class Circle:
     def __init__(self, radius:float):
-        pass
-# Create method "is_valid" in the Circle class
-# This method checks if the circle is valid
-# True if the circle is valid, False otherwise
+        self.radius = radius
+    
+    def is_valid(self) -> str:
+        return bool(self.radius)
+
+circle = Circle(4)
+is_valid_circle = circle.is_valid()
+print("Can it be a circle?", is_valid_circle)
 
 # Create method "diameter" in the Circle class
 # This method finds the diameter of the circle
