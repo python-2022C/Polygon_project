@@ -21,5 +21,6 @@ class Circle:
     def is_valid(self):
         return self.r > 0
     def diameter(self):
+        return self.r*2
 
 
