@@ -1,4 +1,4 @@
-import math
+from math import sqrt
 class Triangle:
     def __init__(self, a:float, b:float, c:float):
         self.a = a
@@ -14,17 +14,17 @@ class Triangle:
         Returns:
             bool: True if the triangle is valid, False otherwise
         '''
-        min_side = min(self.a, self.b, self.c)
+        min_side1 = min(self.a, self.b, self.c)
         max_side = max(self.a, self.b, self.c)
-        middle_side = self.a, self.b, self.c - max_side - min_side
-        return middle_side < min_side + max_side
+        min_side2 = self.a + self.b + self.c - max_side - min_side1
+        return min_side1 + min_side2 > max_side
     
     def get_type(self) -> str:
         '''
         This method finds the type of the triangle.
         '''
         if self.is_valid():
-            if self.a == self.b and self.b == self.c: 
+            if self.a == self.b == self.c : 
                 return "By Side: Equilateral Triangle"
             elif self.a == self.b or self.a == self.c or self.b == self.c: 
                 return "By Side: Isoceles Triangle"
@@ -57,7 +57,9 @@ class Triangle:
         '''
         if self.is_valid():
             semi_petemeter = self.perimeter() / 2
-            s = math.sqrt(semi_petemeter * (semi_petemeter - self.a) * (semi_petemeter - self.b) * (semi_petemeter - self.c))
+            s = sqrt(semi_petemeter * (semi_petemeter - self.a) * (semi_petemeter - self.b) * (semi_petemeter - self.c))
             return s
         else:
             return 0
+x = Triangle(3, 3, 3)
+print(x.get_type())
