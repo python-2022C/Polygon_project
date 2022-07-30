@@ -1,4 +1,4 @@
-import math
+from math import pi
 class Circle:
     def __init__(self, radius:float):
         self.radius = radius
@@ -37,7 +37,7 @@ class Circle:
             float: return circumference of the circle if the circle is valid, 0 otherwise
         '''
         if self.is_valid():
-            return 2 * math.pi * self.radius
+            return 2 * pi * self.radius
         return 0
     
     def area(self) -> float:
@@ -50,5 +50,5 @@ class Circle:
             float: return area of the circle if the circle is valid, 0 otherwise
         '''
         if self.is_valid():
-            return math.pi * self.radius**2
+            return pi * self.radius**2
         return 0

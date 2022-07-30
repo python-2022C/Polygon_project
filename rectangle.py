@@ -1,4 +1,3 @@
-import math
 
 class Rectangle:
     def __init__(self, a:float, b:float):

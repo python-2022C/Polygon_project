@@ -1,5 +1,3 @@
-import math
-
 class Square:
     def __init__(self, square_side:float):
         """
@@ -29,7 +27,7 @@ class Square:
             float or int: return area of the square if the square is valid, 0 otherwise
         """
         if self.is_valid(): 
-            return self.square_side * self.square_side
+            return self.square_side ** 2
         return 0
     
     def perimeter(self):
